@@ -1,0 +1,28 @@
+{
+  "name": "inventory-app",
+  "version": "1.0.0",
+  "description": "A web application that tracks the inventory of a logistics company.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amotul-raheem/inventory-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amotul-raheem/inventory-app/issues"
+  },
+  "homepage": "https://github.com/Amotul-raheem/inventory-app#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3",
+    "nodemon": "^2.0.16"
+  }
+}
