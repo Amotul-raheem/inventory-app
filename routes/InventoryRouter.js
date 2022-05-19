@@ -40,5 +40,31 @@ inventoryRouter.get("/get-all-inventory", async (req, res) => {
         res.status(500).send(error)
     }
 })
+inventoryRouter.post("/delete-inventory", async (req, res) => {
+    try {
+        const product = await product.findOne({product_code: req.body.product_code});
+
+        product.deleted = true
+        product.deletion_message = req.body.deletion_message
+        await product.save()
+
+        res.status(200).send("Inventory deleted successfully")
+    } catch (error) {
+        res.status(500).send(error)
+    }
+})
+inventoryRouter.post("/undelete-inventory", async (req,res) => {
+    try{
+        const product = await product.findOne({product_code: req.body.product_code});
+
+        product.deleted = false
+        product.deletion_message = null
+        await product.save()
+
+        res.status(200).send("Inventory undeleted successfully")
+    } catch (error){
+        res.status(500).send(error)
+    }
+})
 
 export {inventoryRouter}

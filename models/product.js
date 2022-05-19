@@ -25,6 +25,9 @@ const productSchema = new Schema({
     deleted: {
         type: Boolean,
         default: false
+    },
+    deletion_message: {
+        type: String
     }
 })
 
