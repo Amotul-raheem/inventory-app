@@ -16,7 +16,7 @@ const productSchema = new Schema({
     },
     inventory_on_hand:{
         type: Number,
-        required: true
+        default: 0
     },
     price_per_unit: {
         type: Number,
