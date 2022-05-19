@@ -63,6 +63,7 @@ RESPONSE: `Inventory undeleted successfully`
 The get all inventory endpoint is a get request that returns all inventories saved by a user except deleted inventories.
 
 REQUEST PAYLOAD: 
+
 RESPONSE:
 `[
 {
