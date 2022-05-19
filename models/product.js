@@ -23,7 +23,8 @@ const productSchema = new Schema({
         required: true
     },
     deleted: {
-        type: Boolean
+        type: Boolean,
+        default: false
     }
 })
 
